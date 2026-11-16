@@ -6,7 +6,7 @@ import { projects } from "@/data/portfolio";
 export const metadata = {
   title: "Projects Archive — Badrinath M H",
   description:
-    "Explore 9 production & freelance client projects built by Badrinath M H — Sakthi Classifieds, Hanvith Jobs, Enterprise ERP/CRM, SV Logistics, Yuva Cargo Movers, RK Engineering Works, Sannedhan Homes, Etsy Automation, and Thirumoolar Gurupeedam.",
+    "Explore 9 production & freelance client projects built by Badrinath M H — Olive & Sikes, Saneedhan Homes, Sakthi Classifieds, Hanvith Jobs, ERP & CRM, RK Engineering Works, SV Logistics, Yuva Cargo Movers, and Thirumoolar Gurupeedam.",
 };
 
 function ProjectMockupLarge({ color, type }) {

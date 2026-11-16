@@ -1,6 +1,6 @@
 # Badrinath M H - Software Developer
 
-Personal portfolio and showcase of production applications, freelance client work, and engineering projects.
+*Personal portfolio and showcase of production applications, freelance client work, and engineering projects.*
 
 Live Site: https://badrinath.dev (or your deployed URL)
 
@@ -30,38 +30,33 @@ I prefer building clean, reliable software that solves real operational bottlene
 
 ## Selected Work
 
-### Production Platforms
+1. Olive & Sikes
+   - Custom MERN application connecting Etsy and Printify APIs to automate print-on-demand listings.
+   - Automated product draft generation, title and description preparation, and cross-platform inventory sync.
+   - Cut manual listing time by approximately 90-95% for the client's store operations.
+   - Stack: React.js, Node.js, Express.js, MongoDB, REST APIs (MERN Stack).
 
-1. Sakthi Classifieds
+2. Saneedhan Homes
+   - Multi-page responsive business website with custom inquiry processing and email automation.
+   - Built with Next.js, responsive layouts, and integrated inquiry delivery.
+   - Stack: Next.js, Tailwind CSS, JavaScript, PHPMailer.
+
+3. Sakthi Classifieds
    - Resale marketplace connecting commercial advertisers with buyers.
    - Built role-based access for Admin, Company, and User accounts with session handling.
    - Created subscription plan engine for publishing and managing listings.
    - Stack: PHP, MySQL, JavaScript, HTML5, CSS3.
 
-2. Hanvith Jobs
+4. Hanvith Jobs
    - Recruitment platform connecting hiring managers, recruiters, and candidates.
    - Implemented recruiter verification workflows, resume download access control, and application tracking.
    - Built administrative management tools for company accounts and postings.
    - Stack: PHP, MySQL, JavaScript, HTML5, CSS3.
 
-3. Enterprise ERP & CRM
-   - Centralized system managing employee operations, marketing follow-ups, and financial tracking.
+5. ERP & CRM
+   - Centralized enterprise system managing employee operations, marketing follow-ups, and financial tracking.
    - Added automated billing, tax calculations, receipt generation, and task management.
    - Reduced manual administrative effort across internal teams by roughly 40%.
-   - Stack: PHP, MySQL, JavaScript, HTML5, CSS3.
-
-### Freelance Client Projects
-
-4. Olive & Sikes Etsy Automation Tool
-   - Custom MERN application connecting Etsy and Printify APIs to automate print-on-demand listings.
-   - Automated product draft generation, title and description preparation, and cross-platform inventory sync.
-   - Cut manual listing time by approximately 90-95% for the client's store operations.
-   - Stack: React.js, Node.js, Express.js, MongoDB, REST APIs.
-
-5. SV Logistics
-   - Shipment tracking and billing automation platform for a regional logistics provider.
-   - Features automated invoice generation, live status management, and employee access levels.
-   - Reduced daily administrative manual work by roughly 60%.
    - Stack: PHP, MySQL, JavaScript, HTML5, CSS3.
 
 6. RK Engineering Works
@@ -69,11 +64,18 @@ I prefer building clean, reliable software that solves real operational bottlene
    - Handled bill generation with auto-fill, offline record history, and direct thermal/A4 printing without cloud dependencies.
    - Stack: Electron.js, JavaScript, HTML5, CSS3.
 
-7. Sannedhan Homes
-   - Multi-page responsive business website with custom inquiry processing and email automation.
-   - Stack: Next.js, Tailwind CSS, JavaScript, PHPMailer.
+7. SV Logistics
+   - Shipment tracking and billing automation platform for a regional logistics provider.
+   - Features automated invoice generation, live status management, and employee access levels.
+   - Reduced daily administrative manual work by roughly 60%.
+   - Stack: PHP, MySQL, JavaScript, HTML5, CSS3.
 
-8. Thirumoolar Gurupeedam
+8. Yuva Cargo Movers
+   - Client-specific logistics website managed end-to-end from requirements gathering to live cPanel production hosting.
+   - Features responsive service showcase, quote requests, and uptime monitoring.
+   - Stack: PHP, MySQL, JavaScript, HTML5, CSS3.
+
+9. Thirumoolar Gurupeedam
    - Content management system and donor receipt management platform for temple operations.
    - Features donation logging, offline billing, expense tracking, and event management.
    - Stack: PHP, MySQL, JavaScript, HTML5, CSS3.

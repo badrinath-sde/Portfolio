@@ -20,7 +20,57 @@ export const personalInfo = {
 };
 
 export const projects = [
-  // --- PRODUCTION PROJECTS ---
+  // 1. Olive & Sikes – MERN Stack
+  {
+    id: "etsy-printify-automation",
+    name: "Olive & Sikes",
+    type: "Freelance",
+    category: "MERN STACK AUTOMATION",
+    period: "Client Automation Tool",
+    impact: "Automated cross-platform listings, reducing manual effort by ~92–95%",
+    description:
+      "Designed and developed a client-specific MERN stack automation application to streamline product listing workflows across Etsy and Printify.",
+    features: [
+      "Integrated Etsy and Printify APIs to automate product draft creation, title and description generation, product details management, and cross-platform listing workflows.",
+      "Implemented centralized product and order management features, including viewing, editing, deleting, and tracking product details and orders.",
+      "Automated repetitive listing tasks, including product information preparation and synchronization between platforms, reducing manual effort by approximately 92–95% according to the client's workflow estimates.",
+      "Managed end-to-end application development and delivered a locally operated solution tailored to the client's requirements, without cloud hosting.",
+    ],
+    tags: ["React.js", "Express.js", "Node.js", "MongoDB", "Etsy API", "Printify API", "MERN Stack"],
+    links: {
+      demo: "https://github.com/badrinath-sde",
+      github: "https://github.com/badrinath-sde",
+      casestudy: "#",
+    },
+    color: "#6366f1",
+  },
+
+  // 2. Saneedhan Homes – Next.js
+  {
+    id: "sannedhan-homes",
+    name: "Saneedhan Homes",
+    type: "Freelance",
+    category: "NEXT.JS BUSINESS WEB",
+    period: "Live Client Website",
+    impact: "Modern multi-page Next.js web application with integrated email automation",
+    description:
+      "Designed and developed a multi-page business website for an interior design company, showcasing its services and business offerings.",
+    features: [
+      "Built a responsive website with 5–6 pages, including service information and a contact form for customer inquiries.",
+      "Integrated PHP and PHPMailer to process contact form submissions and deliver email notifications.",
+      "Managed the complete project lifecycle independently, from requirement gathering and UI design to development, testing, and deployment.",
+      "Handled website hosting, configuration, and ongoing maintenance to support the client's online presence.",
+    ],
+    tags: ["Next.js", "Tailwind CSS", "JavaScript", "PHPMailer", "Responsive UI"],
+    links: {
+      demo: "https://www.sannedhanhomes.in/",
+      github: "https://github.com/badrinath-sde",
+      casestudy: "https://www.sannedhanhomes.in/",
+    },
+    color: "#14b8a6",
+  },
+
+  // 3. Sakthi Classifieds – PHP
   {
     id: "sakthi-classifieds",
     name: "Sakthi Classifieds",
@@ -44,6 +94,8 @@ export const projects = [
     },
     color: "#3b82f6",
   },
+
+  // 4. Hanvith Jobs – PHP
   {
     id: "hanvith-jobs",
     name: "Hanvith Jobs",
@@ -67,9 +119,11 @@ export const projects = [
     },
     color: "#10b981",
   },
+
+  // 5. ERP & CRM – PHP
   {
     id: "company-erp-crm",
-    name: "Enterprise ERP & CRM",
+    name: "ERP & CRM",
     type: "Production",
     category: "ERP & WORKFLOW CRM",
     period: "Enterprise Operations",
@@ -91,7 +145,32 @@ export const projects = [
     color: "#8b5cf6",
   },
 
-  // --- FREELANCE CLIENT PROJECTS ---
+  // 6. RK Engineering Works – Electron.js
+  {
+    id: "rk-engineering-works",
+    name: "RK Engineering Works",
+    type: "Freelance",
+    category: "DESKTOP BILLING APP",
+    period: "Machinery Business Software",
+    impact: "Automated auto-fill billing, direct printing, & local financial record tracking",
+    description:
+      "Designed and developed a client-specific desktop application for a machinery business to streamline billing and financial record management.",
+    features: [
+      "Implemented automated bill generation with auto-fill functionality, bill downloading, direct printing, and centralized bill history tracking.",
+      "Developed income and expense tracking features to help the client monitor financial transactions and maintain business records.",
+      "Delivered a standalone, locally operated desktop application tailored to the client's requirements without cloud dependency.",
+      "Managed the complete development lifecycle independently, from requirement analysis and application development to local deployment.",
+    ],
+    tags: ["Electron.js", "JavaScript", "HTML5", "CSS3", "Desktop Software", "Auto-Fill Engine"],
+    links: {
+      demo: "https://github.com/badrinath-sde",
+      github: "https://github.com/badrinath-sde",
+      casestudy: "#",
+    },
+    color: "#ec4899",
+  },
+
+  // 7. SV Logistics – PHP
   {
     id: "sv-logistics",
     name: "SV Logistics",
@@ -116,6 +195,8 @@ export const projects = [
     },
     color: "#06b6d4",
   },
+
+  // 8. Yuva Cargo Movers – PHP
   {
     id: "yuva-cargo-movers",
     name: "Yuva Cargo Movers",
@@ -139,75 +220,8 @@ export const projects = [
     },
     color: "#f59e0b",
   },
-  {
-    id: "rk-engineering-works",
-    name: "RK Engineering Works",
-    type: "Freelance",
-    category: "DESKTOP BILLING APP",
-    period: "Machinery Business Software",
-    impact: "Automated auto-fill billing, direct printing, & local financial record tracking",
-    description:
-      "Designed and developed a client-specific desktop application for a machinery business to streamline billing and financial record management.",
-    features: [
-      "Implemented automated bill generation with auto-fill functionality, bill downloading, direct printing, and centralized bill history tracking.",
-      "Developed income and expense tracking features to help the client monitor financial transactions and maintain business records.",
-      "Delivered a standalone, locally operated desktop application tailored to the client's requirements without cloud dependency.",
-      "Managed the complete development lifecycle independently, from requirement analysis and application development to local deployment.",
-    ],
-    tags: ["Electron.js", "JavaScript", "HTML5", "CSS3", "Desktop Software", "Auto-Fill Engine"],
-    links: {
-      demo: "https://github.com/badrinath-sde",
-      github: "https://github.com/badrinath-sde",
-      casestudy: "#",
-    },
-    color: "#ec4899",
-  },
-  {
-    id: "sannedhan-homes",
-    name: "Sannedhan Homes",
-    type: "Freelance",
-    category: "INTERIOR BUSINESS WEB",
-    period: "Live Client Website",
-    impact: "Modern multi-page Next.js web application with integrated email automation",
-    description:
-      "Designed and developed a multi-page business website for an interior design company, showcasing its services and business offerings.",
-    features: [
-      "Built a responsive website with 5–6 pages, including service information and a contact form for customer inquiries.",
-      "Integrated PHP and PHPMailer to process contact form submissions and deliver email notifications.",
-      "Managed the complete project lifecycle independently, from requirement gathering and UI design to development, testing, and deployment.",
-      "Handled website hosting, configuration, and ongoing maintenance to support the client's online presence.",
-    ],
-    tags: ["Next.js", "Tailwind CSS", "JavaScript", "PHPMailer", "Responsive UI"],
-    links: {
-      demo: "https://www.sannedhanhomes.in/",
-      github: "https://github.com/badrinath-sde",
-      casestudy: "https://www.sannedhanhomes.in/",
-    },
-    color: "#14b8a6",
-  },
-  {
-    id: "etsy-printify-automation",
-    name: "Olive & Sikes Etsy Automation Tool",
-    type: "Freelance",
-    category: "E-COMMERCE AUTOMATION",
-    period: "Client Automation Tool",
-    impact: "Automated cross-platform listings, reducing manual effort by ~92–95%",
-    description:
-      "Designed and developed a client-specific MERN stack automation application to streamline product listing workflows across Etsy and Printify.",
-    features: [
-      "Integrated Etsy and Printify APIs to automate product draft creation, title and description generation, product details management, and cross-platform listing workflows.",
-      "Implemented centralized product and order management features, including viewing, editing, deleting, and tracking product details and orders.",
-      "Automated repetitive listing tasks, including product information preparation and synchronization between platforms, reducing manual effort by approximately 92–95% according to the client's workflow estimates.",
-      "Managed end-to-end application development and delivered a locally operated solution tailored to the client's requirements, without cloud hosting.",
-    ],
-    tags: ["React.js", "Express.js", "Node.js", "MongoDB", "Etsy API", "Printify API", "Automation"],
-    links: {
-      demo: "https://github.com/badrinath-sde",
-      github: "https://github.com/badrinath-sde",
-      casestudy: "#",
-    },
-    color: "#6366f1",
-  },
+
+  // 9. Thirumoolar Gurupeedam – PHP
   {
     id: "thirumoolar-gurupeedam",
     name: "Thirumoolar Gurupeedam",

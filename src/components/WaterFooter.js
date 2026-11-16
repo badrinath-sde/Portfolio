@@ -9,83 +9,6 @@ export default function WaterFooter() {
 
   const [squeakCount, setSqueakCount] = useState(0);
 
-  // Sound generator using Web Audio API (zero external audio files needed)
-  const playSqueakSound = () => {
-    try {
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (!AudioCtx) return;
-      const ctx = new AudioCtx();
-      if (ctx.state === "suspended") ctx.resume();
-
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-
-      osc.type = "sine";
-      const now = ctx.currentTime;
-      osc.frequency.setValueAtTime(620, now);
-      osc.frequency.exponentialRampToValueAtTime(1150, now + 0.08);
-      osc.frequency.exponentialRampToValueAtTime(740, now + 0.18);
-
-      gain.gain.setValueAtTime(0.16, now);
-      gain.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
-
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-
-      osc.start(now);
-      osc.stop(now + 0.21);
-    } catch (e) {}
-  };
-
-  const playMunchSound = () => {
-    try {
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (!AudioCtx) return;
-      const ctx = new AudioCtx();
-      if (ctx.state === "suspended") ctx.resume();
-
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = "triangle";
-      const now = ctx.currentTime;
-      osc.frequency.setValueAtTime(750, now);
-      osc.frequency.exponentialRampToValueAtTime(380, now + 0.08);
-
-      gain.gain.setValueAtTime(0.06, now);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.09);
-
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start(now);
-      osc.stop(now + 0.1);
-    } catch (e) {}
-  };
-
-  const playSplashSound = () => {
-    try {
-      const AudioCtx = window.AudioContext || window.webkitAudioContext;
-      if (!AudioCtx) return;
-      const ctx = new AudioCtx();
-      if (ctx.state === "suspended") ctx.resume();
-      const now = ctx.currentTime;
-
-      // Soft aquatic water splash/bloop
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.type = "sine";
-      osc.frequency.setValueAtTime(440, now);
-      osc.frequency.exponentialRampToValueAtTime(130, now + 0.14);
-
-      gain.gain.setValueAtTime(0.09, now);
-      gain.gain.exponentialRampToValueAtTime(0.001, now + 0.15);
-
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.start(now);
-      osc.stop(now + 0.16);
-    } catch (e) {}
-  };
-
   useEffect(() => {
     const container = containerRef.current;
     const canvas = canvasRef.current;
@@ -421,7 +344,6 @@ export default function WaterFooter() {
       addRipple(width * 0.22, 6.5, 160);
       addRipple(width * 0.78, 6.5, 160);
       createSplash(width * (0.25 + Math.random() * 0.5), BASELINE_Y, 12, 3.4);
-      playSplashSound();
 
       // Duck pops up with a playful bounce
       duck.vy = -5.4;
@@ -605,7 +527,6 @@ export default function WaterFooter() {
       duck.dragOffsetX = e.clientX - r.left - duck.x;
       duck.dragOffsetY = e.clientY - r.top - duck.y;
 
-      playSqueakSound();
       setSqueakCount((c) => c + 1);
       createSplash(duck.x + duck.width / 2, duck.y + duck.height * 0.7, 7, 3);
       addRipple(duck.x + duck.width / 2, 4, 110);
@@ -912,10 +833,9 @@ export default function WaterFooter() {
               );
               fish.targetY = BASELINE_Y + 50;
 
-              // Splashdown visuals & aquatic audio
+              // Splashdown visuals
               createSplash(fish.x, surfaceY, 14, 3.4);
               addRipple(fish.x, 5.5, 140);
-              playSplashSound();
               for (let b = 0; b < 5; b++) {
                 bubbles.push({
                   x: fish.x + (Math.random() - 0.5) * 12,
@@ -953,7 +873,6 @@ export default function WaterFooter() {
 
               // Mouth reaches food crumb (< 18px)
               if (minFoodDist < 18) {
-                playMunchSound();
                 const fpIdx = foodPellets.indexOf(nearestFood);
                 if (fpIdx > -1) {
                   foodPellets.splice(fpIdx, 1);
