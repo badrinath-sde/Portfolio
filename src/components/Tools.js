@@ -598,7 +598,7 @@ export default function Tools() {
       startY: pointerY,
       lastX: pointerX,
       lastY: pointerY,
-      lastTime: performance.now(),
+      lastTime: e.timeStamp || 0,
       hasMoved: false,
     };
 
@@ -613,7 +613,7 @@ export default function Tools() {
 
       const currentPointerX = (moveEvent.clientX - centerX) / scale;
       const currentPointerY = (moveEvent.clientY - centerY) / scale;
-      const now = performance.now();
+      const now = moveEvent.timeStamp || (dragStateRef.current.lastTime + 16);
       const dt = Math.max(1, now - dragStateRef.current.lastTime);
 
       const dx = currentPointerX - dragStateRef.current.lastX;

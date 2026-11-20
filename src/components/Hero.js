@@ -203,14 +203,20 @@ export default function Hero() {
     if (activeStep >= 6) {
       const currentIdx = activeStep - 6;
       if (prevCardIndex !== null && prevCardIndex !== currentIdx) {
-        setIsTransitioning(true);
+        const startTimer = setTimeout(() => {
+          setIsTransitioning(true);
+        }, 0);
         if (transitionTimeoutRef.current) clearTimeout(transitionTimeoutRef.current);
         transitionTimeoutRef.current = setTimeout(() => {
           setIsTransitioning(false);
           setPrevCardIndex(currentIdx);
         }, 520);
+        return () => clearTimeout(startTimer);
       } else if (prevCardIndex === null) {
-        setPrevCardIndex(currentIdx);
+        const initTimer = setTimeout(() => {
+          setPrevCardIndex(currentIdx);
+        }, 0);
+        return () => clearTimeout(initTimer);
       }
     }
   }, [activeStep, prevCardIndex]);

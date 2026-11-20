@@ -5,12 +5,10 @@ import Link from "next/link";
 import WaterFooter from "./WaterFooter";
 
 export default function Footer() {
-  const [currentYear, setCurrentYear] = useState(2026);
+  const currentYear = 2026;
   const [isFeeding, setIsFeeding] = useState(false);
 
   useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-
     const handleFoodState = (e) => {
       if (e && e.detail) {
         setIsFeeding(Boolean(e.detail.isFeeding));

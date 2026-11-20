@@ -15,11 +15,19 @@ export default function Navbar() {
     window.addEventListener("scroll", handleScroll);
 
     // Read stored theme preference (default to 'light')
-    const currentTheme = document.documentElement.getAttribute("data-theme") || localStorage.getItem("portfolio-theme") || "light";
-    setTheme(currentTheme);
-    document.documentElement.setAttribute("data-theme", currentTheme);
+    const initTimer = setTimeout(() => {
+      const currentTheme =
+        document.documentElement.getAttribute("data-theme") ||
+        localStorage.getItem("portfolio-theme") ||
+        "light";
+      setTheme(currentTheme);
+      document.documentElement.setAttribute("data-theme", currentTheme);
+    }, 0);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () => {
+      clearTimeout(initTimer);
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   const toggleTheme = () => {

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
 import { projects, personalInfo } from "@/data/portfolio";
 import gsap from "gsap";
@@ -463,6 +463,26 @@ export default function ProjectThumbnails() {
     touchEndRef.current = 0;
   };
 
+  const goToSpread = useCallback(
+    (targetIdx, dir) => {
+      if (targetIdx === activeSpreadIndex || isFlipping) return;
+      if (targetIdx < 0 || targetIdx >= totalSpreads) return;
+
+      const direction = dir || (targetIdx > activeSpreadIndex ? "next" : "prev");
+      setTargetSpreadIndex(targetIdx);
+      setFlipDir(direction);
+      setIsFlipping(true);
+
+      if (flipTimerRef.current) clearTimeout(flipTimerRef.current);
+
+      flipTimerRef.current = setTimeout(() => {
+        setActiveSpreadIndex(targetIdx);
+        setIsFlipping(false);
+      }, 850);
+    },
+    [activeSpreadIndex, isFlipping, totalSpreads]
+  );
+
   // Auto-turn spread every 7s on desktop when open and idle
   useEffect(() => {
     if (!isOpen || isOpening || isUserHovered || isFlipping) return;
@@ -474,7 +494,7 @@ export default function ProjectThumbnails() {
     }, 7000);
 
     return () => clearInterval(autoTurnInterval);
-  }, [isOpen, isOpening, isUserHovered, isFlipping, activeSpreadIndex, totalSpreads]);
+  }, [isOpen, isOpening, isUserHovered, isFlipping, activeSpreadIndex, totalSpreads, goToSpread]);
 
   const handleOpenBook = () => {
     if (isOpen || isOpening) return;
@@ -493,23 +513,6 @@ export default function ProjectThumbnails() {
     setActiveSpreadIndex(0);
     setTimeout(() => {
       setIsOpening(false);
-    }, 850);
-  };
-
-  const goToSpread = (targetIdx, dir) => {
-    if (targetIdx === activeSpreadIndex || isFlipping) return;
-    if (targetIdx < 0 || targetIdx >= totalSpreads) return;
-
-    const direction = dir || (targetIdx > activeSpreadIndex ? "next" : "prev");
-    setTargetSpreadIndex(targetIdx);
-    setFlipDir(direction);
-    setIsFlipping(true);
-
-    if (flipTimerRef.current) clearTimeout(flipTimerRef.current);
-
-    flipTimerRef.current = setTimeout(() => {
-      setActiveSpreadIndex(targetIdx);
-      setIsFlipping(false);
     }, 850);
   };
 

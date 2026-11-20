@@ -10,10 +10,6 @@ export default function PageLoader() {
   const [isMounted, setIsMounted] = useState(true);
 
   useEffect(() => {
-    setIsExiting(false);
-    setIsMounted(true);
-    setProgress(0);
-
     const startTime = performance.now();
     const duration = 650;
     let frameId;
